@@ -6,18 +6,16 @@ public class desc_node_delete_19 {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         int i = 1;
         ListNode right = head;
-        if(n==1){
-            ListNode temp = right;
-            while(right.next!=null){
-                temp = right;
-                right=right.next;
+        while(right.next!=null){
+            if(i==n){
+                break;
             }
-            temp.next=null;
-            return head;
-        }
-        while(right.next!=null&&i<n){
             i++;
             right=right.next;
+        }
+        if(right.next==null&&i==n){
+            head = head.next;
+            return head;
         }
         ListNode left = head;
         ListNode temp = left;

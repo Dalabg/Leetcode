@@ -1,13 +1,18 @@
 package Coding_Caprice.bintree.gettree;
 
 public class treeconstructor {
-    public TreeNode tree(Integer[]nodes){
-        TreeNode root = new TreeNode(nodes[0]);
-        for (int i = 0; i < nodes.length; i++) {
-            if(nodes[i]!=null){
-                
-            }
+    public static TreeNode buildTree(int[] nodes, int index){
+        if (index >= nodes.length || nodes[index] == -1) {
+            return null;
         }
-        return root;
+
+        // 创建一个新的节点，值为数组中的当前元素
+        TreeNode node = new TreeNode(nodes[index]);
+
+        // 递归构建左子树和右子树
+        node.left = buildTree(nodes, 2 * index + 1);
+        node.right = buildTree(nodes, 2 * index + 2);
+
+        return node;
     }
 }

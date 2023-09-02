@@ -7,5 +7,6 @@ public class stringtest {
 //        System.out.println("krmyfshbspcgtesxnnljhfursyissjnsocgdhgfxubewllxzqhpasguvlrxtkgatzfybprfmmfithphckksnvjkcvnsqgsgosfxc".length());
         leftreverse_offer58 b = new leftreverse_offer58();
         System.out.println(b.reverseLeftWords("asdfgh",2));
+        System.out.println(reverse_word_151.reverseWords("   Apple    Banana   Cherry    "));
     }
 }
